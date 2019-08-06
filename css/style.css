@@ -1,0 +1,59 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Noto Sans KR";
+  color: #666666;
+}
+
+header {
+  margin-left: 5px
+
+}
+/* The grid: Four equal columns that floats next to each other */
+.column {
+  float: left;
+  padding: 6px;
+}
+
+/* Style the images inside the grid */
+.column img {
+  opacity: 1; 
+  cursor: pointer; 
+}
+
+.column img:hover {
+  opacity: 0.8;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* The expanding image container (positioning is needed to position the close button and the text) */
+.container {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 46px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  max-height: 700px;
+  text-align: center;
+}
+
+/* Closable button inside the image */
+.close {
+  position: absolute;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  transition: 0.3s;
+  cursor: pointer;
+}
